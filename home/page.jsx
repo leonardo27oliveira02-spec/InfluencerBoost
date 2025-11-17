@@ -1,22 +1,38 @@
+import Navbar from "@/components/Navbar";
+import ToolCard from "@/components/ToolCard";
+import { useRouter } from "next/navigation";
+
 export default function HomePage() {
+  const router = useRouter();
+
   return (
-    <main style={{ padding: 24, fontFamily: "sans-serif" }}>
-      <h1 style={{ fontSize: 28, fontWeight: "bold" }}>
-        InfluencerBoost 🚀
-      </h1>
+    <main style={{ fontFamily: "sans-serif", backgroundColor: "#000", minHeight: "100vh", color: "#fff" }}>
+      <Navbar />
 
-      <p style={{ marginTop: 12, fontSize: 18 }}>
-        Seu assistente inteligente para crescer nas redes sociais.
-      </p>
+      <div style={{ padding: "24px" }}>
+        <h1 style={{ fontSize: 28, fontWeight: "bold" }}>
+          Ferramentas Principais
+        </h1>
 
-      <div style={{ marginTop: 30 }}>
-        <h2 style={{ fontSize: 22, fontWeight: "600" }}>Ferramentas Principais</h2>
+        <div style={{ marginTop: 24 }}>
+          <ToolCard
+            title="✨ Gerador de Roteiros"
+            description="Crie roteiros curtos, chamativos e profissionais."
+            onClick={() => router.push("/tools/script")}
+          />
 
-        <ul style={{ marginTop: 10, fontSize: 18 }}>
-          <li>✨ Gerador de Roteiros</li>
-          <li>🔥 Gerador de Legendas</li>
-          <li>🎯 Ideias de Vídeos Personalizadas</li>
-        </ul>
+          <ToolCard
+            title="🔥 Gerador de Legendas"
+            description="Legendas naturais, modernas e que convertem."
+            onClick={() => router.push("/tools/caption")}
+          />
+
+          <ToolCard
+            title="🎯 Ideias de Vídeos"
+            description="Gere ideias virais e fáceis de gravar para o seu nicho."
+            onClick={() => router.push("/tools/ideas")}
+          />
+        </div>
       </div>
     </main>
   );
