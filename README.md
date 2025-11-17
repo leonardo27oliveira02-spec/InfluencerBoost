@@ -1,2 +1,3 @@
 # InfluencerBoost
-(app focado em ajudar influenciadores a crescer, organizar conteúdos, gerar scripts, legendas, ideias e análises)
+
+Aplicativo para impulsionar influenciadores com painel completo de métricas, ferramentas de engajamento e mensagens automáticas. 
